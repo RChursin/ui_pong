@@ -11,7 +11,7 @@ const gameOverEl = document.createElement('div');
 
 // Paddle
 const paddleHeight = 10;
-const paddleWidth = 50;
+const paddleWidth = 80;
 const paddleDiff = 25;
 let paddleBottomX = 225;
 let paddleTopX = 225;
@@ -21,7 +21,7 @@ let paddleContact = false;
 // Ball
 let ballX = 250;
 let ballY = 350;
-const ballRadius = 5;
+const ballRadius = 7;
 
 // Speed
 let speedY;
@@ -194,7 +194,7 @@ function gameOver() {
     if (playerScore === winningScore || computerScore === winningScore) {
       isGameOver = true;
       // Set Winner
-      const winner = playerScore === winningScore ? 'You' : 'Computer';
+      const winner = playerScore === winningScore ? 'Player' : 'Computer';
       showGameOverEl(winner);
     }
 }
